@@ -69,7 +69,7 @@ const char* version = "1.0.2";
 //user configurable global variables to set before loading to Arduino
 int maxrelays = 16;  //set up before loading to Arduino (maximum possible relays)
 int relays = 4;  //set up before loading to Arduino (max = 8 with current code)
-boolean isActiveHigh=true; //set to true if using "active high" relay, set to false if using "active low" relay
+boolean isActiveHigh=false; //set to true if using "active high" relay, set to false if using "active low" relay
 boolean isDebugEnabled=true;    // enable or disable debug in this example
 
 //set global variables
