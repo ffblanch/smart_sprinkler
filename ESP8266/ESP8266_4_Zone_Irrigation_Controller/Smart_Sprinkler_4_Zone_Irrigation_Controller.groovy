@@ -36,10 +36,10 @@
  // for the UI
 preferences {
         
-    input("oneTimer", "text", title: "Zone One", description: "Zone One Time", required: false, defaultValue: "1")
-    input("twoTimer", "text", title: "Zone Two", description: "Zone Two Time", required: false, defaultValue: "1")
-    input("threeTimer", "text", title: "Zone Three", description: "Zone Three Time", required: false, defaultValue: "1")
-    input("fourTimer", "text", title: "Zone Four", description: "Zone Four Time", required: false, defaultValue: "1")
+    String oneTimer = input("oneTimer", "text", title: "Zone One", description: "Zone One Time", required: false, defaultValue: "1")
+    String twoTimer = input("twoTimer", "text", title: "Zone Two", description: "Zone Two Time", required: false, defaultValue: "1")
+    String threeTimer = input("threeTimer", "text", title: "Zone Three", description: "Zone Three Time", required: false, defaultValue: "1")
+    String fourTimer = input("fourTimer", "text", title: "Zone Four", description: "Zone Four Time", required: false, defaultValue: "1")
 }
 
 metadata {
@@ -376,7 +376,7 @@ def OnWithZoneTimes(value) {
         log.info("Zone ${parts[0].toInteger()} on for ${parts[1]} minutes")
     }
     
-    getAction("/command?command=allOn,${checkTime(zoneTimes[1]) ?: 0},${checkTime(zoneTimes[2]) ?: 0},${checkTime(zoneTimes[3]) ?: 0},${checkTime(zoneTimes[4]) ?: 0},${checkTime(zoneTimes[5]) ?: 0},${checkTime(zoneTimes[6]) ?: 0},${checkTime(zoneTimes[7]) ?: 0},${checkTime(zoneTimes[8]) ?: 0}")
+    getAction("/command?command=allOn,${checkTime(zoneTimes[1]) ?: 1},${checkTime(zoneTimes[2]) ?: 1},${checkTime(zoneTimes[3]) ?: 1},${checkTime(zoneTimes[4]) ?: 1},${checkTime(zoneTimes[5]) ?: 0},${checkTime(zoneTimes[6]) ?: 0},${checkTime(zoneTimes[7]) ?: 0},${checkTime(zoneTimes[8]) ?: 0}")
 }
 
 def off() {
