@@ -61,7 +61,7 @@ ESP8266_8_Zone_Irrigation_Controller.ino.generic.bin
 
 ## High Level Instructions
 
-Install the two SmartApps and the two Device Handlers using the SmartThings IDE.
+Install the two SmartApps(Listed above) and the two Device Handlers(Listed above) using the SmartThings IDE.
 
 Flash the firmware onto an ESP8266 microcontroller using ESPEasy or the Arduino IDE.  
 
@@ -73,7 +73,7 @@ The controller will then connect to that WIFI AP using DHCP.
 
 Using the SmartThings Phone App, start the SmartApp called Smart Sprinkler (Connect).  Use this SmartApp to discover all Smart Sprinkler controllers on the network and create Irrigation schedules for the controller(s).
 
-Additional instructions on scheduling, wiring the controller to your sprinkler valves, etc. can be found on the original Smart Sprinkler project.
+Additional instructions on scheduling, wiring the controller to your sprinkler valves, etc. can be found on the original Smart Sprinkler project. 
 
 *[Smart Sprinkler](https://github.com/d8adrvn/smart_sprinkler)
 
@@ -93,3 +93,5 @@ There are a large variety of ESP8266 based options including prefabricated board
 
 ![LinkNode R8](http://linksprite.com/wiki/images/thumb/a/ae/LinkNode_R8-5.jpg/640px-LinkNode_R8-5.jpg)
 
+### Trouble shooting
+- if smart things is not receiving updates when you push a button you will need to manually specify your hubs ip address in the Arduino IDE. After that you should see the ipaddess and port update in the serial monitor.
